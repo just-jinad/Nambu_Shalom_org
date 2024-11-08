@@ -1,6 +1,16 @@
+"use client"
 import React from 'react';
+import 'aos/dist/aos.css'
+import AOS from 'aos'
+import { useEffect } from 'react';
 
 const Testimonials = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  })
   const testimonials = [
     {
       name: 'John Doe',
@@ -21,7 +31,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+      <div className="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8">What People Say</h2>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (

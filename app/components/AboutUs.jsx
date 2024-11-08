@@ -1,9 +1,21 @@
+"use client"
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import {useEffect} from 'react'
 
 const AboutUs = () => {
+
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  }, [])
+
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center" data-aos="fade-up">
         {/* Image */}
         <div className="md:w-1/2 mb-8 md:mb-0">
           <img
