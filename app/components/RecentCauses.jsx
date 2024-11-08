@@ -1,6 +1,17 @@
+"use client"
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const RecentCauses = () => {
+  useEffect(() => {
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  }, [])
+  
   const causes = [
     {
       title: 'Our programs foster enterprises',
@@ -27,7 +38,7 @@ const RecentCauses = () => {
 
   return (
     <section className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">We Are Fighting For</h2>
         <p className="mt-4 text-center text-gray-600">Recent Causes</p>
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

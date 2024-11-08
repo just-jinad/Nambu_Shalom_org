@@ -1,9 +1,21 @@
+"use client"
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Newsletter = () => {
+  useEffect(()=>{
+    AOS.init(
+      {
+        duration:3000,
+        once:false
+      }
+    )
+  })
   return (
     <section className="py-16 bg-yellow-100">
-      <div className="max-w-4xl mx-auto px-4 text-center">
+      <div className="max-w-4xl mx-auto px-4 text-center" data-aos="fade-updated">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
           Subscribe to Our Newsletter
         </h2>

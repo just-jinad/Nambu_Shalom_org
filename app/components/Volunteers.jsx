@@ -1,6 +1,16 @@
+"use client"
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Volunteers = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  })
   const volunteers = [
     { name: 'Ara Farrington', role: 'Volunteer', img: '/path-to-image1.jpg' },
     { name: 'Kevin Haley', role: 'Volunteer', img: '/path-to-image2.jpg' },
@@ -10,7 +20,7 @@ const Volunteers = () => {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
+      <div className="max-w-6xl mx-auto px-4 text-center" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">Meet Our Volunteers</h2>
         <p className="mt-4 text-gray-600">Volunteering for good causes</p>
         

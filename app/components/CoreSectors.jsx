@@ -1,7 +1,19 @@
+"use client"
 import React from 'react';
 import { FaHandHoldingHeart, FaHeartbeat, FaGraduationCap, FaWater } from 'react-icons/fa';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import {useEffect } from 'react'
 
 const CoreSectors = () => {
+
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  }, [])
+
   const sectors = [
     { icon: <FaHandHoldingHeart className="text-4xl text-yellow-500" />, title: 'Economic Opportunity', description: 'We provide support for economic development to improve livelihoods and reduce poverty.' },
     { icon: <FaHeartbeat className="text-4xl text-red-500" />, title: 'Health and Nutrition', description: 'We promote health and nutrition programs to improve community well-being.' },
@@ -11,8 +23,8 @@ const CoreSectors = () => {
 
   return (
     <section className="py-16 bg-gray-100 text-center">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">Our Core Sectors</h2>
+      <div className="max-w-5xl mx-auto px-4" data-aos="fade-up">
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800" >Our Core Sectors</h2>
         <p className="mt-4 text-gray-600">We Invest In Four Key Areas</p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sectors.map((sector, index) => (

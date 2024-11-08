@@ -1,6 +1,16 @@
+"use client"
 import React from 'react';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const DonateSection = () => {
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once:false
+    })
+  })
   return (
     <section
       className="relative py-24 bg-cover bg-center text-white"
