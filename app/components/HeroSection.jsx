@@ -6,12 +6,12 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
         <div className="text-center text-white max-w-2xl px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            Help us to Save <br />
-            A Helping Hand for the <span className="text-yellow-400">Homeless People</span>
+          Together, We Empower <br />
+          Communities and Restore <span className="text-yellow-400">Hope</span>
           </h1>
           <div className="mt-6 flex justify-center space-x-4">
             <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
-              Donate Now
+            Support Our Mission
             </button>
             <button className="bg-white text-black font-semibold py-2 px-4 rounded-lg hover:bg-gray-200">
               Discover More
