@@ -14,7 +14,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "Nambu Shalom",
-  description: "Nambu Shalom Outreach",
+  description: "Nambu Shalom Org",
 };
 
 export default function RootLayout({ children }) {
