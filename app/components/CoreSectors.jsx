@@ -28,7 +28,7 @@ const CoreSectors = () => {
         <p className="mt-4 text-gray-600">We Invest In Four Key Areas</p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sectors.map((sector, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <div key={index} className="p-4 hover:shadow-xl transition-shadow">
               <div className="flex justify-center mb-4">{sector.icon}</div>
               <h3 className="text-xl font-semibold text-gray-800">{sector.title}</h3>
               <p className="mt-2 text-gray-600">{sector.description}</p>
