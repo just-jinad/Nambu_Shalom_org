@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from "react";
+import React, { Fragment } from "react";  // Import React here
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
@@ -61,7 +61,7 @@ const Navbar = () => {
       {isOpen && (
         <nav className="md:hidden bg-gray-50 border-t border-gray-200">
           <Link href="/LandingPage" className="block px-4 py-2 hover:bg-gray-100">
-           Home
+            Home
           </Link>
           <Link href="/OurImpact" className="block px-4 py-2 hover:bg-gray-100">
             Our Impact
@@ -101,25 +101,29 @@ const Navbar = () => {
 const Dropdown = ({ title, children, mobile }) => {
   return (
     <Menu as="div" className={`relative inline-block text-left ${mobile ? "w-full" : ""}`}>
-      <Menu.Button className="inline-flex items-center space-x-2 hover:text-blue-500">
-        <span>{title}</span>
-        <ChevronDownIcon className="w-5 h-5" />
-      </Menu.Button>
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-200"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-150"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        <Menu.Items
-          className={`absolute ${mobile ? "w-full left-0" : "right-0"} mt-2 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50`}
+      <div className="group">
+        <Menu.Button className="inline-flex items-center space-x-2 hover:text-blue-500">
+          <span className="font-bold">{title}</span>
+          <ChevronDownIcon className="w-5 h-5" />
+        </Menu.Button>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-200"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-150"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
         >
-          {children}
-        </Menu.Items>
-      </Transition>
+          <Menu.Items
+            className={`absolute ${mobile ? "w-full left-0" : "right-0"} mt-2 origin-top-right bg-white border border-gray-200 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 group-hover:block`}
+          >
+            {React.Children.map(children, (child) => (
+              <div className="px-6 py-3 font-bold hover:bg-gray-100">{child}</div>
+            ))}
+          </Menu.Items>
+        </Transition>
+      </div>
     </Menu>
   );
 };
