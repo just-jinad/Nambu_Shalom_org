@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg relative z-40">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-bold text-blue-500">Nambu-Shalom</h1>
+        <h1 className="text-2xl font-bold text-black">Nambu-Shalom</h1>
         {/* Large Screen Navigation */}
         <nav className="hidden md:flex space-x-6">
           <Link href="/LandingPage" className="hover:text-blue-500">
@@ -52,7 +52,7 @@ const Navbar = () => {
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden text-blue-500" onClick={toggleMenu}>
+        <button className="md:hidden text-black" onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
