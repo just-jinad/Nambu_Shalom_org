@@ -1,9 +1,13 @@
 import Image from 'next/image';
+import Navbar from '../Navbar';
 
 export default function HeroSection() {
   return (
+    <>
+    
+    <Navbar/>
     <div className="relative bg-cover bg-center h-[600px] flex items-center justify-center" 
-         style={{ backgroundImage: 'url(/images/hero-bg.jpg)' }}>
+         style={{ backgroundImage: 'url(https://i.pinimg.com/736x/be/e5/bc/bee5bc41b9dd4b9178bbc8c6a9d513e2.jpg)' }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -16,5 +20,6 @@ export default function HeroSection() {
         </button>
       </div>
     </div>
+    </>
   );
 }
