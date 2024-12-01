@@ -64,7 +64,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <nav className="md:hidden bg-gray-50 border-t border-gray-200">
-          <Link href="" className="block px-4 py-2 hover:bg-gray-100">
+          <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
             Home
           </Link>
           <Link href="/OurImpact" className="block px-4 py-2 hover:bg-gray-100">
