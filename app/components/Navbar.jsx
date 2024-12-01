@@ -70,6 +70,7 @@ const Navbar = () => {
           <Link href="/OurImpact" className="block px-4 py-2 hover:bg-gray-100">
             Our Impact
           </Link>
+          <div className="ml-4">
           <Dropdown title="More Pages" mobile>
             <Link href="/ChallengesSupport" className="block px-4 py-2 hover:bg-gray-100">
               Challenges/Support
@@ -81,6 +82,9 @@ const Navbar = () => {
               About Us
             </Link>
           </Dropdown>
+          </div>
+
+          <div className="ml-4 mb-2">
           <Dropdown title="Projects" mobile>
             <Link href="/StLukesMedical" className="block px-4 py-2 hover:bg-gray-100">
               St. Luke's Medical
@@ -95,6 +99,7 @@ const Navbar = () => {
               School of Mission
             </Link>
           </Dropdown>
+          </div>
         </nav>
       )}
     </header>
