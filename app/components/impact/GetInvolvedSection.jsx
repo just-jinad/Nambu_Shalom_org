@@ -1,7 +1,16 @@
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import {useEffect} from 'react'
 export default function GetInvolvedSection() {
+  useEffect(()=>{
+    AOS.init({
+      duration: 3000,
+      once:false
+    })
+  })
   return (
     <section className="bg-gray-50 py-16">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-8" data-aos="fade-up">
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-500">Get Involved</h2>

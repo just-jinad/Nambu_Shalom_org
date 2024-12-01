@@ -1,10 +1,20 @@
 import Image from 'next/image';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
+
 
 export default function IntroductionSection() {
+  useEffect(()=>{
+    AOS.init({
+      duration:3000,
+      once: false,
+    })
+  })
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid  items-center">
+        <div className="grid  items-center" data-aos="fade-up">
           {/* Text Section */}
           <div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-yellow-500">
