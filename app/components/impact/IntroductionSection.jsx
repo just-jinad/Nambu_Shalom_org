@@ -4,31 +4,42 @@ export default function IntroductionSection() {
   return (
     <section className="bg-gray-100 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid  items-center">
           {/* Text Section */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-orange-500">
-              Give a Helping Hand to the Needy
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-yellow-500">
+              Impact of Nambu-Shalom Rural Ministry
             </h2>
             <p className="text-gray-700 text-base sm:text-lg mb-6">
-              We make a lot of effort to help achieve the global poverty rate decline and support education for children living in poor families.
+              The impression and impact which Nambu-Shalom Rural Ministry has made in Oke-Ogun Area, North West of Oyo State in Nigeria, particularly as it involves the development of Oje-Owode town and its environs, are remarkable, especially at the headquarters of the mission.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-medium shadow-md transition">
-              Learn More
-            </button>
+            <p className="text-gray-700 text-base sm:text-lg mb-6">
+              Notable influences for positive transformation are evident in church planting, youth and women empowerment, primary school education, rural evangelism, employment for socio-economic development, and the promotion of organic agricultural programs.
+            </p>
+            <h3 className="text-xl font-bold mt-6 mb-4 text-gray-800">Youth and Women Empowerment</h3>
+            <p className="text-gray-700 text-base sm:text-lg mb-6">
+              NSRM combats poverty by providing financial aid as capital to establish small-scale businesses for self-sustenance. Beneficiaries have received resources such as autobikes, grinding machines, and financial support to expand their trade in raw food, helping improve their lives and their families.
+            </p>
+            <h3 className="text-xl font-bold mt-6 mb-4 text-gray-800">Educational Development</h3>
+            <p className="text-gray-700 text-base sm:text-lg mb-6">
+              Shalom Kiddies College, established in September 2011, aims to bring quality education, sound morals, and the fear of God to pupils in rural areas. With the slogan "Catch Them Young," the school also provides scholarships for some students, contributing to community growth.
+            </p>
+            <p className="text-gray-700 text-base sm:text-lg mb-6">
+              Additionally, the Aba-Church Village has a two-classroom block where about forty children learn. However, attracting qualified teachers to rural settings remains a challenge that NSRM hopes to address through missionary training programs.
+            </p>
           </div>
 
           {/* Image Section */}
-          <div className="relative">
+          {/* <div className="relative">
             <Image 
-              src="/images/helping-hand.jpg" 
-              alt="Helping Hand" 
+              src="/images/impactful-change.jpg" 
+              alt="Impactful Change" 
               width={500} 
               height={400} 
               className="rounded-lg shadow-lg object-cover w-full h-auto" 
               priority 
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

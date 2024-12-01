@@ -1,46 +1,35 @@
-"use client"
 import React from 'react';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react';
 
 const RecentCauses = () => {
-  useEffect(() => {
-    AOS.init({
-      duration:3000,
-      once:false
-    })
-  }, [])
-  
   const causes = [
     {
-      title: 'Our programs foster enterprises',
-      description: 'Empowering communities through sustainable economic development.',
+      title: 'Empowering Rural Economies',
+      description: 'Providing training and resources to foster entrepreneurship and sustainable farming practices.',
       raised: 10565,
       goal: 20000,
-      image: '/path-to-cause-image1.jpg',
+      image: 'https://i.pinimg.com/736x/7f/8f/09/7f8f091635047704d08f5e653780a98d.jpg',
     },
     {
-      title: 'Our education programs create safe spaces',
-      description: 'Providing quality education to underprivileged communities.',
+      title: 'Expanding Educational Access',
+      description: 'Creating opportunities for children in underserved areas through the Kiddie’s College program.',
       raised: 10465,
       goal: 20000,
-      image: '/path-to-cause-image2.jpg',
+      image: 'https://i.pinimg.com/736x/86/a9/26/86a9266c85a35b3d030781d2428083b7.jpg',
     },
     {
-      title: 'Restore access to clean drinking water',
-      description: 'Ensuring access to safe drinking water in drought-prone areas.',
+      title: 'Improving Rural Healthcare',
+      description: 'Delivering essential medical care and supplies through St. Luke’s Medical Mission.',
       raised: 10365,
       goal: 20000,
-      image: '/path-to-cause-image3.jpg',
+      image: 'https://i.pinimg.com/736x/38/b2/e9/38b2e953c2f1598886e6595afe08046f.jpg',
     },
   ];
 
   return (
     <section className="py-16 bg-gray-100">
-      <div className="max-w-6xl mx-auto px-4" data-aos="fade-up">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">We Are Fighting For</h2>
-        <p className="mt-4 text-center text-gray-600">Recent Causes</p>
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">Our Focus Areas</h2>
+        <p className="mt-4 text-center text-gray-600">Recent Initiatives</p>
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {causes.map((cause, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -49,9 +38,9 @@ const RecentCauses = () => {
                 <h3 className="text-xl font-semibold text-gray-800">{cause.title}</h3>
                 <p className="text-gray-600 mt-2">{cause.description}</p>
                 <div className="mt-4">
-                  <div className="text-sm font-medium text-gray-600">
+                  {/* <div className="text-sm font-medium text-gray-600">
                     Raised: ${cause.raised.toLocaleString()} / Goal: ${cause.goal.toLocaleString()}
-                  </div>
+                  </div> */}
                   <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                     <div
                       className="bg-yellow-500 h-2 rounded-full"

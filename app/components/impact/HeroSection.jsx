@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="relative z-10 text-center text-white px-4 md:px-8">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">Helping Them Today</h1>
         <p className="text-4xl md:text-6xl font-bold mb-6">We Can Make A Difference</p>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-medium shadow-md">
+        <button className="bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-6 rounded-lg font-medium shadow-md">
           Learn More
         </button>
       </div>

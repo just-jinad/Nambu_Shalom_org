@@ -15,17 +15,17 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg relative z-40">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-bold text-black">Nambu-Shalom</h1>
+        <h1 className="text-xl font-bold text-gray-500">Nambu-Shalom</h1>
         {/* Large Screen Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/LandingPage" className="hover:text-blue-500">
+          <Link href="/" className=" text-gray-500 hover:text-green-300 font-bold">
             Home
           </Link>
-          <Link href="/OurImpact" className="hover:text-blue-500">
+          <Link href="/OurImpact" className="text-gray-500 hover:text-green-300 font-bold">
             Our Impact
           </Link>
-          <Dropdown className="px-10" title="More Pages">
-            <Link href="/ChallengesSupport" className="hover:text-blue-500 block">
+          <Dropdown className="px-5" title="More Pages">
+            <Link href="/ChallengesSupport" className="text-gray-500 hover:text-green-300 font-bold block">
               Challenges/Support
             </Link>
             <Link href="/Outreach" className="hover:text-blue-500 block">
