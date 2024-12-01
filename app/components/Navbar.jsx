@@ -16,13 +16,13 @@ const Navbar = () => {
     <header className="bg-white shadow-lg relative z-40">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         <h1 className="text-xl font-bold  "> 
-          <Link href="">
+          <Link href="/">
           Nambu-Shalom
           </Link>
           </h1>
         {/* Large Screen Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="" className="  hover:text-yellow-600 font-bold">
+          <Link href="/" className="  hover:text-yellow-600 font-bold">
             Home
           </Link>
           <Link href="/OurImpact" className=" hover:text-yellow-600 font-bold">

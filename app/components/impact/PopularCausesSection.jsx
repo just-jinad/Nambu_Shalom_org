@@ -1,6 +1,14 @@
 import Image from 'next/image';
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 export default function PopularCausesSection() {
+  useEffect(()=>{
+    AOS.init({
+      duration: 3000,
+      once: false,
+    })
+  })
   const causes = [
     {
       title: 'Empower Youth and Women',
@@ -34,7 +42,7 @@ export default function PopularCausesSection() {
 
   return (
     <section className="bg-white py-16">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-8" data-aos="fade-up">
         {/* Section Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-500">Our Impactful Causes</h2>

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Image from 'next/image';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -6,8 +6,8 @@ import Navbar from '../components/Navbar';
 const ChallengesSupport = () => {
   return (
     <>
-    <Navbar/>
-      <main className="mb-4 ">
+      <Navbar />
+      <main className="mb-4">
         {/* Header Section */}
         <section
           className="relative h-40 sm:h-56 md:h-64 w-full bg-cover bg-center mb-12"
@@ -18,7 +18,7 @@ const ChallengesSupport = () => {
         >
           <div className="absolute inset-0 bg-black bg-opacity-20"></div> {/* Reduced opacity for brighter text */}
           <div className="max-w-7xl mx-auto px-6 md:px-8 h-full flex items-center justify-center text-center">
-            <div className="text-center  sm:px-8">
+            <div className="text-center sm:px-8">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4">
                 Challenges & Support
               </h1>
@@ -87,24 +87,34 @@ const ChallengesSupport = () => {
 
 const challenges = [
   {
-    title: 'Limited Resources',
-    description: 'Supporting healthcare and educational programs in remote areas is challenging due to limited funding and supplies.',
-    icon: '/icons/limited-resources.png',
+    title: 'Access to Education',
+    description: 'Many children in rural areas lack access to quality education due to the absence of schools, learning materials, and trained teachers.',
+    icon: '/icons/education.png', // Replace with actual image path
   },
   {
-    title: 'Geographical Barriers',
-    description: 'Reaching underserved communities in remote and hard-to-access areas.',
-    icon: '/icons/geographical-barriers.png',
+    title: 'Healthcare Challenges',
+    description: 'Limited access to medical facilities and healthcare professionals leads to preventable illnesses and deaths in underserved communities.',
+    icon: '/icons/healthcare.png', // Replace with actual image path
   },
   {
-    title: 'Funding Constraints',
-    description: 'Insufficient funding to expand our sustainable farming and livelihood initiatives.',
-    icon: '/icons/funding-constraints.png',
+    title: 'Economic Hardship',
+    description: 'Poverty and unemployment in rural areas hinder community development and self-sustainability.',
+    icon: '/icons/economic-hardship.png', // Replace with actual image path
   },
   {
-    title: 'Raising Awareness',
-    description: 'Spreading the word about our mission and reaching potential global supporters.',
-    icon: '/icons/awareness.png',
+    title: 'Environmental Degradation',
+    description: 'Deforestation and unsustainable farming practices contribute to soil erosion and reduced agricultural productivity.',
+    icon: '/icons/environment.png', // Replace with actual image path
+  },
+  {
+    title: 'Prevalence of Preventable Diseases',
+    description: 'Lack of resources for preventive healthcare measures results in high rates of treatable diseases.',
+    icon: '/icons/preventable-diseases.png', // Replace with actual image path
+  },
+  {
+    title: 'Community Awareness Challenges',
+    description: 'Limited knowledge about sustainable practices hinders long-term development in rural areas.',
+    icon: '/icons/community-awareness.png', // Replace with actual image path
   },
 ];
 
@@ -112,17 +122,17 @@ const supportOptions = [
   {
     title: 'Donate',
     description: 'Contribute to our projects and help us bring positive change to those in need.',
-    icon: '/icons/donate.png',
+    icon: '/icons/donate.png', // Replace with actual image path
   },
   {
     title: 'Volunteer',
     description: 'Join our team and help us directly in the field or with administrative tasks.',
-    icon: '/icons/volunteer.png',
+    icon: '/icons/volunteer.png', // Replace with actual image path
   },
   {
     title: 'Partner',
     description: 'Collaborate with us as an organization to amplify our efforts and reach.',
-    icon: '/icons/partner.png',
+    icon: '/icons/partner.png', // Replace with actual image path
   },
 ];
 
