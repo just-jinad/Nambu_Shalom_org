@@ -15,37 +15,41 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg relative z-40">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-xl font-bold text-gray-500">Nambu-Shalom</h1>
+        <h1 className="text-xl font-bold  "> 
+          <Link href="">
+          Nambu-Shalom
+          </Link>
+          </h1>
         {/* Large Screen Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className=" text-gray-500 hover:text-green-300 font-bold">
+          <Link href="" className="  hover:text-yellow-600 font-bold">
             Home
           </Link>
-          <Link href="/OurImpact" className="text-gray-500 hover:text-green-300 font-bold">
+          <Link href="/OurImpact" className=" hover:text-yellow-600 font-bold">
             Our Impact
           </Link>
           <Dropdown className="px-5" title="More Pages">
-            <Link href="/ChallengesSupport" className="text-gray-500 hover:text-green-300 font-bold block">
+            <Link href="/ChallengesSupport" className=" hover:text-yellow-600 font-bold block">
               Challenges/Support
             </Link>
-            <Link href="/Outreach" className="hover:text-blue-500 block">
+            <Link href="/Outreach" className="hover:text-yellow-500 block">
               Outreach
             </Link>
-            <Link href="/AboutUs" className="hover:text-blue-500 block">
+            <Link href="/AboutUs" className="hover:text-yellow-500 block">
               About Us
             </Link>
           </Dropdown>
           <Dropdown title="Projects">
-            <Link href="/StLukesMedical" className="hover:text-blue-500 block">
+            <Link href="/StLukesMedical" className="hover:text-yellow-500 block">
               St. Luke's Medical
             </Link>
-            <Link href="/IntegratedFarming" className="hover:text-blue-500 block">
+            <Link href="/IntegratedFarming" className="hover:text-yellow-500 block">
               Integrated Farming
             </Link>
-            <Link href="/KiddiesCollege" className="hover:text-blue-500 block">
+            <Link href="/KiddiesCollege" className="hover:text-yellow-500 block">
               Kiddies College
             </Link>
-            <Link href="/SchoolOfMission" className="hover:text-blue-500 block">
+            <Link href="/SchoolOfMission" className="hover:text-yellow-500 block">
               School of Mission
             </Link>
           </Dropdown>
@@ -60,7 +64,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isOpen && (
         <nav className="md:hidden bg-gray-50 border-t border-gray-200">
-          <Link href="/LandingPage" className="block px-4 py-2 hover:bg-gray-100">
+          <Link href="" className="block px-4 py-2 hover:bg-gray-100">
             Home
           </Link>
           <Link href="/OurImpact" className="block px-4 py-2 hover:bg-gray-100">
@@ -102,7 +106,7 @@ const Dropdown = ({ title, children, mobile }) => {
   return (
     <Menu as="div" className={`relative inline-block text-left ${mobile ? "w-full" : ""}`}>
       <div className="group">
-        <Menu.Button className="inline-flex items-center space-x-2 hover:text-blue-500">
+        <Menu.Button className="inline-flex items-center space-x-2 hover:text-yellow-500">
           <span className="font-bold">{title}</span>
           <ChevronDownIcon className="w-5 h-5" />
         </Menu.Button>

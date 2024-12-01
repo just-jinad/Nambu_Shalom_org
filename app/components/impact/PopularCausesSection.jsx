@@ -5,28 +5,28 @@ export default function PopularCausesSection() {
     {
       title: 'Empower Youth and Women',
       description: 'Providing financial aid and resources for small businesses to reduce poverty and improve livelihoods.',
-      image: '/images/empowerment.jpg', // Update with an image representing empowerment
+      image: '/empowerment1.jpg', // Update with an image representing empowerment
       raised: '₦1,700,000',
       goal: '₦4,000,000',
     },
     {
       title: 'Support Educational Development',
       description: 'Providing scholarships and quality education through Shalom Kiddies College for children in rural areas.',
-      image: '/images/education.jpg', // Update with an image representing education
+      image: '/empowerment2.jpg', // Update with an image representing education
       raised: '₦130,087',
       goal: '₦500,000',
     },
     {
       title: 'Promote Organic Farming',
       description: 'Supporting organic agricultural programs for sustainable livelihoods and socio-economic development.',
-      image: '/images/farming.jpg', // Update with an image representing organic farming
+      image: '/empowerment3.jpg', // Update with an image representing organic farming
       raised: '₦8,325',
       goal: '₦20,000',
     },
     {
       title: 'Church Planting and Evangelism',
       description: 'Establishing new churches and evangelizing rural communities to promote spiritual growth.',
-      image: '/images/church-planting.jpg', // Update with an image representing church planting
+      image: '/empowerment4.jpg', // Update with an image representing church planting
       raised: '₦2,500,000',
       goal: '₦5,000,000',
     },
