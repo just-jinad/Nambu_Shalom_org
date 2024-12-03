@@ -29,7 +29,7 @@ const RecentCauses = () => {
     <section className="py-16 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">Our Focus Areas</h2>
-        <p className="mt-4 text-center text-gray-600">Recent Initiatives</p>
+        {/* <p className="mt-4 text-center text-gray-600">Recent Initiatives</p> */}
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {causes.map((cause, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
