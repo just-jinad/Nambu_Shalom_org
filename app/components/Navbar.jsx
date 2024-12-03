@@ -15,21 +15,21 @@ const Navbar = () => {
   return (
     <header className="bg-white shadow-lg relative z-40">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-xl font-bold">
+        <h1 className="text-xl font-bold  "> 
           <Link href="/">
-            Nambu-Shalom
+          Nambu-Shalom
           </Link>
-        </h1>
+          </h1>
         {/* Large Screen Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-yellow-600 font-bold">
+          <Link href="/" className="  hover:text-yellow-600 font-bold">
             Home
           </Link>
-          <Link href="/OurImpact" className="hover:text-yellow-600 font-bold">
+          <Link href="/OurImpact" className=" hover:text-yellow-600 font-bold">
             Our Impact
           </Link>
           <Dropdown className="px-5" title="More Pages">
-            <Link href="/ChallengesSupport" className="hover:text-yellow-600 font-bold block">
+            <Link href="/ChallengesSupport" className=" hover:text-yellow-600 font-bold block">
               Challenges/Support
             </Link>
             <Link href="/Outreach" className="hover:text-yellow-500 block">
@@ -70,35 +70,35 @@ const Navbar = () => {
           <Link href="/OurImpact" className="block px-4 py-2 hover:bg-gray-100">
             Our Impact
           </Link>
-          <div className="px-4"> {/* Removed ml-4 and added px-4 for consistent padding */}
-            <Dropdown title="More Pages" mobile>
-              <Link href="/ChallengesSupport" className="block px-4 py-2 hover:bg-gray-100">
-                Challenges/Support
-              </Link>
-              <Link href="/Outreach" className="block px-4 py-2 hover:bg-gray-100">
-                Outreach
-              </Link>
-              <Link href="/AboutUs" className="block px-4 py-2 hover:bg-gray-100">
-                About Us
-              </Link>
-            </Dropdown>
+          <div className="ml-4">
+          <Dropdown title="More Pages" mobile>
+            <Link href="/ChallengesSupport" className="block px-4 py-2 hover:bg-gray-100">
+              Challenges/Support
+            </Link>
+            <Link href="/Outreach" className="block px-4 py-2 hover:bg-gray-100">
+              Outreach
+            </Link>
+            <Link href="/AboutUs" className="block px-4 py-2 hover:bg-gray-100">
+              About Us
+            </Link>
+          </Dropdown>
           </div>
 
-          <div className="px-4 mb-2"> {/* Removed ml-4 and added px-4 for consistent padding */}
-            <Dropdown title="Projects" mobile>
-              <Link href="/StLukesMedical" className="block px-4 py-2 hover:bg-gray-100">
-                St. Luke's Medical
-              </Link>
-              <Link href="/IntegratedFarming" className="block px-4 py-2 hover:bg-gray-100">
-                Integrated Farming
-              </Link>
-              <Link href="/KiddiesCollege" className="block px-4 py-2 hover:bg-gray-100">
-                Kiddies College
-              </Link>
-              <Link href="/SchoolOfMission" className="block px-4 py-2 hover:bg-gray-100">
-                School of Mission
-              </Link>
-            </Dropdown>
+          <div className="ml-4 mb-2">
+          <Dropdown title="Projects" mobile>
+            <Link href="/StLukesMedical" className="block px-4 py-2 hover:bg-gray-100">
+              St. Luke's Medical
+            </Link>
+            <Link href="/IntegratedFarming" className="block px-4 py-2 hover:bg-gray-100">
+              Integrated Farming
+            </Link>
+            <Link href="/KiddiesCollege" className="block px-4 py-2 hover:bg-gray-100">
+              Kiddies College
+            </Link>
+            <Link href="/SchoolOfMission" className="block px-4 py-2 hover:bg-gray-100">
+              School of Mission
+            </Link>
+          </Dropdown>
           </div>
         </nav>
       )}

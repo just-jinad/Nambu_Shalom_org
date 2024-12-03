@@ -1,83 +1,92 @@
 "use client"
-const AboutUsPage = () => {
+import Image from 'next/image';
+import Navbar from '../components/Navbar';
+const AboutUs = () => {
   return (
-    <main className="bg-white py-10">
-      <section className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl font-extrabold text-green-700 mb-4">About Us</h1>
-        <p className="text-lg text-gray-700 mb-6">
-          At Nambu-Shalom, we are dedicated to creating sustainable change in communities through innovative programs in healthcare, education, and agriculture. Our mission is to empower individuals and uplift underserved areas.
-        </p>
+    <>
+    <Navbar/>
+    <main className="bg-white py-16">
+      {/* Header Section */}
+      <section className="text-center mb-12">
+        <h1 className="text-4xl font-extrabold text-gray-800">About Us</h1>
+      </section>
 
-        {/* Our Mission Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-green-600 mb-4">Our Mission</h2>
-          <p className="text-gray-700">
-            To improve the quality of life for vulnerable populations by providing accessible healthcare, quality education, and sustainable livelihood opportunities.
+      {/* Mission Section */}
+      <section className="bg-blue-500 py-12 text-white">
+        <div className="max-w-5xl mx-auto px-6 md:px-8">
+          <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+          <p className="text-lg leading-relaxed">
+            To dedicate efforts that empower communities and generate sustainable impacts. 
+            By merging education, healthcare, and livelihood initiatives, we aim to elevate 
+            underprivileged communities and create lasting opportunities.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Our Vision Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-green-600 mb-4">Our Vision</h2>
-          <p className="text-gray-700">
-            To build self-reliant communities where everyone has the opportunity to thrive and reach their full potential.
+      {/* Vision Section */}
+      <section className="relative py-12">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/vision-bg.jpg"
+            alt="Vision Background"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-50"
+          />
+        </div>
+        <div className="relative max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Vision</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            To inspire a world where every community thrives with equal opportunities 
+            and sustainable solutions. Our vision is rooted in fostering self-reliance, 
+            resilience, and innovation to address the challenges of today and tomorrow.
           </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Our Values Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-green-600 mb-4">Our Core Values</h2>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700">
-            <li>Integrity: Upholding the highest standards of honesty and accountability.</li>
-            <li>Compassion: Addressing the needs of communities with empathy and care.</li>
-            <li>Innovation: Implementing creative solutions to drive sustainable change.</li>
-            <li>Collaboration: Working together with stakeholders to amplify our impact.</li>
+      {/* Values Section */}
+      <section className="py-12">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Our Values</h2>
+          <ul className="space-y-4 text-lg text-gray-700">
+            <li>✔ Commitment to creating a meaningful impact in every community.</li>
+            <li>✔ Integrity and transparency in all our actions and partnerships.</li>
+            <li>✔ Collaboration to amplify the power of change and progress.</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        {/* Meet the Team Section */}
-        <section>
-          <h2 className="text-3xl font-bold text-green-600 mb-4">Meet the Team</h2>
-          <p className="text-gray-700 mb-6">
-            Our dedicated team of professionals and volunteers work tirelessly to achieve our mission. Together, we are driving meaningful change.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <TeamCard
-              name="John Doe"
-              role="Founder & CEO"
-              image="/images/john_doe.jpg"
-            />
-            <TeamCard
-              name="Jane Smith"
-              role="Director of Programs"
-              image="/images/jane_smith.jpg"
-            />
-            <TeamCard
-              name="Michael Brown"
-              role="Community Outreach Coordinator"
-              image="/images/michael_brown.jpg"
-            />
+      {/* Team Section */}
+      <section className="bg-gray-100 py-12">
+        <div className="max-w-7xl mx-auto px-6 md:px-8">
+          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Meet Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="text-center">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  width={120}
+                  height={120}
+                  className="rounded-full mx-auto mb-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
       </section>
     </main>
+    </>
   );
 };
 
-const TeamCard = ({ name, role, image }) => {
-  return (
-    <div className="bg-green-50 rounded-lg shadow-md overflow-hidden">
-      <img
-        src={image}
-        alt={name}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <h3 className="text-xl font-semibold text-green-600 mb-2">{name}</h3>
-        <p className="text-gray-700">{role}</p>
-      </div>
-    </div>
-  );
-};
+const team = [
+  { name: 'Roy Agustin', role: 'Program Lead', photo: '/team/roy.jpg' },
+  { name: 'Janet Wilson', role: 'Education Specialist', photo: '/team/janet.jpg' },
+  { name: 'Leo Carter', role: 'Sustainability Expert', photo: '/team/leo.jpg' },
+  { name: 'Grace Dunbar', role: 'Outreach Coordinator', photo: '/team/grace.jpg' },
+];
 
-export default AboutUsPage;
+export default AboutUs;
