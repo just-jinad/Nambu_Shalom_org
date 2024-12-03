@@ -22,10 +22,10 @@ export default function Home() {
       <RecentCauses/>
       <Statistics/>
       <OurMission/>
-      <Volunteers/>
-      <DonateSection/>
+      {/* <Volunteers/> */}
       <Testimonials/>
-      <Newsletter/>
+      <DonateSection/>
+      {/* <Newsletter/> */}
       <Footer/>
    </>
   );

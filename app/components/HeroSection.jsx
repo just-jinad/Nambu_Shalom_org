@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -19,7 +20,9 @@ const HeroSection = () => {
               Support Our Mission
             </button>
             <button className="bg-white text-gray-800 font-semibold py-2 px-4 rounded-lg border hover:bg-gray-200">
+              <Link href={"/AboutUs"}>
               Discover More
+              </Link>
             </button>
           </div>
         </div>
