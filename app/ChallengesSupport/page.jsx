@@ -16,6 +16,7 @@ const ChallengesSupport = () => {
   return (
     <>
       <Navbar />
+      <br /><br /><br />
       <main className="mb-4">
         {/* Header Section */}
         <section
