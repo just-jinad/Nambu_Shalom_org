@@ -1,94 +1,116 @@
-"use client"
-const OutreachPage = () => {
-  return (
-    <main className="bg-white py-10">
-      <section className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl font-extrabold text-purple-700 mb-4">Outreach</h1>
-        <p className="text-lg text-gray-700 mb-6">
-          At Nambu-Shalom, our outreach programs aim to extend a helping hand to the most vulnerable communities. Through strategic partnerships and dedicated efforts, we strive to improve lives and inspire hope.
-        </p>
+"use client";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { useState } from "react";
 
-        {/* Outreach Initiatives */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-purple-600 mb-4">Our Initiatives</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <OutreachCard
-              title="Community Health Drives"
-              description="Bringing essential medical care and health education directly to underserved areas."
-              image="/images/health_drive.jpg"
-            />
-            <OutreachCard
-              title="Youth Empowerment"
-              description="Providing skill acquisition programs and mentorship for young individuals."
-              image="/images/youth_empowerment.jpg"
-            />
-            <OutreachCard
-              title="Emergency Relief"
-              description="Offering immediate assistance and resources to communities affected by disasters."
-              image="/images/emergency_relief.jpg"
-            />
+export default function OutreachPage() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const images = [
+    "https://via.placeholder.com/800x400?text=Image+1",
+    "https://via.placeholder.com/800x400?text=Image+2",
+    "https://via.placeholder.com/800x400?text=Image+3",
+    "https://via.placeholder.com/800x400?text=Image+4",
+    "https://via.placeholder.com/800x400?text=Image+5",
+  ];
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <>
+      <div className="bg-gray-100 min-h-screen">
+        {/* Navbar */}
+        <Navbar />
+
+        {/* Hero Section */}
+        <section className="relative w-full h-[500px]">
+          <video
+            src="https://i.pinimg.com/236x/29/44/b4/2944b44fe1ad9dd244c6ab729c1ffeab.jpg"
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+            <h1 className="text-white text-4xl md:text-5xl font-bold">
+              Latest Sermons
+            </h1>
           </div>
         </section>
 
-        {/* Get Involved */}
-        <section>
-          <h2 className="text-3xl font-bold text-purple-600 mb-4">How You Can Get Involved</h2>
-          <p className="text-gray-700 mb-4">
-            Join us in making a difference. Here's how you can be part of our outreach programs:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <InvolvementCard
-              title="Sponsor a Program"
-              description="Support a specific outreach initiative with your resources."
-              icon="/icons/sponsor.png"
-            />
-            <InvolvementCard
-              title="Volunteer"
-              description="Dedicate your time and skills to help our outreach efforts."
-              icon="/icons/volunteer.png"
-            />
-            <InvolvementCard
-              title="Advocate"
-              description="Raise awareness about our mission and programs in your community."
-              icon="/icons/advocate.png"
-            />
+        {/* Main Content */}
+        <main className="max-w-7xl mx-auto py-12 px-6 lg:px-8">
+          {/* Carousel */}
+          <div className="relative mb-12">
+            <div className="relative w-full overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="w-full h-[300px] object-cover flex-shrink-0"
+                  />
+                ))}
+              </div>
+
+              {/* Navigation Buttons */}
+              <button
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+                onClick={handlePrev}
+              >
+                ◀
+              </button>
+              <button
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100"
+                onClick={handleNext}
+              >
+                ▶
+              </button>
+            </div>
           </div>
-        </section>
-      </section>
-    </main>
-  );
-};
 
-const OutreachCard = ({ title, description, image }) => {
-  return (
-    <div className="bg-purple-50 rounded-lg shadow-md overflow-hidden">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-48 object-cover"
-      />
-      <div className="p-4">
-        <h2 className="text-xl font-semibold text-purple-600 mb-2">{title}</h2>
-        <p className="text-gray-700">{description}</p>
+          {/* Sermons Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Card Example */}
+            {[...Array(6)].map((_, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <img
+                  src={`https://via.placeholder.com/400x250?text=Sermon+${
+                    index + 1
+                  }`}
+                  alt={`Sermon ${index + 1}`}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h2 className="text-lg font-semibold text-gray-800 mb-2">
+                    Sermon Title {index + 1}
+                  </h2>
+                  <p className="text-sm text-gray-500 mb-4">
+                    March 25, 2023 | Category
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    A brief description or excerpt from the sermon goes here.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </main>
       </div>
-    </div>
+      <Footer/>
+    </>
   );
-};
-
-const InvolvementCard = ({ title, description, icon }) => {
-  return (
-    <div className="bg-purple-50 rounded-lg shadow-md overflow-hidden p-4 flex items-center space-x-4">
-      <img
-        src={icon}
-        alt={title}
-        className="w-16 h-16 object-contain"
-      />
-      <div>
-        <h3 className="text-xl font-semibold text-purple-600 mb-2">{title}</h3>
-        <p className="text-gray-700">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-export default OutreachPage;
+}
