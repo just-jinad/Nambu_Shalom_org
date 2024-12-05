@@ -28,7 +28,7 @@ const AboutUs = () => {
         </div>
      
         <div className="md:w-1/2 md:pl-10">
-          <h3 className="text-lg text-yellow-600 font-semibold mb-2">About Us</h3>
+          <h3 className="text-lg text-green-600 font-semibold mb-2">About Us</h3>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Building Sustainable Communities Through Faith and Action
           </h2>
@@ -43,7 +43,7 @@ const AboutUs = () => {
             our work reflects our unwavering commitment to empowering individuals and communities
             to thrive spiritually, economically, and socially.
           </p>
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
+          <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">
             Learn More
           </button>
         </div>

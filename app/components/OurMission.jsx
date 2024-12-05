@@ -33,7 +33,7 @@ const OurMission = () => {
           <p className="mt-2 text-gray-600">
             We are committed to empowering individuals in rural areas with tools and opportunities to thrive. From advancing education to promoting sustainable farming and improving access to healthcare, every effort is rooted in faith and action.
           </p>
-          <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-medium rounded-full hover:bg-yellow-600 transition duration-300">
+          <button className="mt-6 px-6 py-3 bg-green-500 text-white font-medium rounded-full hover:bg-green-600 transition duration-300">
             Learn More
           </button>
         </div>

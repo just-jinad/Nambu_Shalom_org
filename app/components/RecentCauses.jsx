@@ -26,7 +26,7 @@ const RecentCauses = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800">Our Focus Areas</h2>
         {/* <p className="mt-4 text-center text-gray-600">Recent Initiatives</p> */}
@@ -43,7 +43,7 @@ const RecentCauses = () => {
                   </div> */}
                   <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
                     <div
-                      className="bg-yellow-500 h-2 rounded-full"
+                      className="bg-green-500 h-2 rounded-full"
                       style={{ width: `${(cause.raised / cause.goal) * 100}%` }}
                     ></div>
                   </div>

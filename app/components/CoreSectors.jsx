@@ -24,8 +24,9 @@ const CoreSectors = () => {
   return (
     <section className="py-16 bg-gray-100 text-center">
       <div className="max-w-5xl mx-auto px-4" data-aos="fade-up">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800" >Our Core Sectors</h2>
-        <p className="mt-4 text-gray-600">We Invest In Four Key Areas</p>
+        <h2 className="text-3xl md:text-4xl font-semibold text-gray-800" >Our Core Mission</h2>
+        <p className="mt-4 text-gray-600">John 10:10</p>
+        <p className=" text-gray-600">The thief cometh not, but to steal,  and to kill, and to destroy: <br /> <i className='font-bold'> I am come that they might have life, and that they might have it more abundantly.</i></p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {sectors.map((sector, index) => (
             <div key={index} className="p-4 hover:shadow-xl transition-shadow">

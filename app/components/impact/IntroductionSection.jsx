@@ -17,7 +17,7 @@ export default function IntroductionSection() {
         <div className="grid  items-center" data-aos="fade-up">
           {/* Text Section */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-yellow-500">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-green-500">
               Impact of Nambu-Shalom Rural Ministry
             </h2>
             <p className="text-gray-700 text-base sm:text-lg mb-6">

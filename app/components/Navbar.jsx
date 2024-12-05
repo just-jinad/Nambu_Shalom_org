@@ -102,7 +102,7 @@ const Navbar = () => {
 const NavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 hover:text-yellow-700 transition-all rounded-md"
+    className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-green-100 hover:text-green-700 transition-all rounded-md"
   >
     {children}
   </Link>
@@ -113,7 +113,7 @@ const Dropdown = ({ title, children, isOpen, onToggle }) => (
     {/* Dropdown Trigger */}
     <button
       onClick={onToggle}
-      className="inline-flex items-center space-x-2 text-lg font-semibold text-gray-700 hover:text-yellow-600"
+      className="inline-flex items-center space-x-2 text-lg font-semibold text-gray-700 hover:text-green-600"
     >
       <span>{title}</span>
       <ChevronDownIcon className="w-5 h-5" />
