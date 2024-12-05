@@ -7,18 +7,18 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const handleDropdown = (id) => {
+    setOpenDropdown(openDropdown === id ? null : id);
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
+      setScrolling(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -30,20 +30,28 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-xl font-bold">
+        <h1 className="text-2xl font-extrabold tracking-wide text-gray-800">
           <Link href="/">Nambu-Shalom</Link>
         </h1>
 
         {/* Large Screen Navigation */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden lg:flex space-x-8 items-center">
           <NavLink href="/">Home</NavLink>
           <NavLink href="/OurImpact">Our Impact</NavLink>
-          <Dropdown title="More Pages">
+          <Dropdown
+            title="More Pages"
+            isOpen={openDropdown === "morePages"}
+            onToggle={() => handleDropdown("morePages")}
+          >
             <NavLink href="/ChallengesSupport">Challenges/Support</NavLink>
             <NavLink href="/Outreach">Outreach</NavLink>
             <NavLink href="/AboutUs">About Us</NavLink>
           </Dropdown>
-          <Dropdown title="Projects">
+          <Dropdown
+            title="Projects"
+            isOpen={openDropdown === "projects"}
+            onToggle={() => handleDropdown("projects")}
+          >
             <NavLink href="/StLukesMedical">St. Luke's Medical</NavLink>
             <NavLink href="/IntegratedFarming">Integrated Farming</NavLink>
             <NavLink href="/KiddiesCollege">Kiddies College</NavLink>
@@ -53,7 +61,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-black"
+          className="lg:hidden text-black"
           onClick={toggleMenu}
           aria-label="Toggle Menu"
         >
@@ -63,7 +71,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <nav className="md:hidden bg-white border-t border-gray-200">
+        <nav className="lg:hidden bg-white border-t border-gray-200">
           <MobileNavLink href="/">Home</MobileNavLink>
           <MobileNavLink href="/OurImpact">Our Impact</MobileNavLink>
           <MobileDropdown title="More Pages">
@@ -94,31 +102,39 @@ const Navbar = () => {
 const NavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="hover:text-yellow-600 font-bold transition-all"
+    className="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-yellow-100 hover:text-yellow-700 transition-all rounded-md"
   >
     {children}
   </Link>
+);
+
+const Dropdown = ({ title, children, isOpen, onToggle }) => (
+  <div className="relative">
+    {/* Dropdown Trigger */}
+    <button
+      onClick={onToggle}
+      className="inline-flex items-center space-x-2 text-lg font-semibold text-gray-700 hover:text-yellow-600"
+    >
+      <span>{title}</span>
+      <ChevronDownIcon className="w-5 h-5" />
+    </button>
+
+    {/* Dropdown Content */}
+    {isOpen && (
+      <div className="absolute right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[200px] z-50">
+        <div className="py-2 space-y-2">{children}</div>
+      </div>
+    )}
+  </div>
 );
 
 const MobileNavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="block px-4 py-2 hover:bg-gray-100 font-bold"
+    className="block px-4 py-2 text-lg font-medium text-gray-800 hover:bg-gray-100 transition-all"
   >
     {children}
   </Link>
-);
-
-const Dropdown = ({ title, children }) => (
-  <div className="relative group">
-    <button className="inline-flex items-center space-x-2 hover:text-yellow-600 font-bold">
-      <span>{title}</span>
-      <ChevronDownIcon className="w-5 h-5" />
-    </button>
-    <div className="absolute hidden group-hover:block mt-2 bg-white border border-gray-200 rounded-md shadow-lg z-50">
-      <div className="py-2">{children}</div>
-    </div>
-  </div>
 );
 
 const MobileDropdown = ({ title, children }) => {
@@ -128,7 +144,7 @@ const MobileDropdown = ({ title, children }) => {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-2 text-left font-bold hover:bg-gray-100"
+        className="w-full px-4 py-2 text-left text-lg font-medium text-gray-800 hover:bg-gray-100"
       >
         {title}
       </button>
