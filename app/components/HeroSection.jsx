@@ -9,14 +9,14 @@ const HeroSection = () => {
         <div className="w-full md:w-1/2 text-center md:text-left mt-6 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-800">
             Together, We Empower <br />
-            Communities and Restore <span className="text-yellow-400">Hope</span>
+            Communities and Restore <span className="text-green-400">Hope</span>
           </h1>
           <p className="mt-4 text-gray-600 text-sm sm:text-base">
             Join us in making a difference. Through education, support, and innovative programs,
             we bring hope and sustainable change to communities around the world.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-lg">
+            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg">
               Support Our Mission
             </button>
             <button className="bg-white text-gray-800 font-semibold py-2 px-4 rounded-lg border hover:bg-gray-200">

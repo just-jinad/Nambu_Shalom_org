@@ -12,7 +12,7 @@ const AboutUs = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-yellow-500 py-12 text-white">
+      <section className="bg-green-500 py-12 text-white">
         <div className="max-w-5xl mx-auto px-6 md:px-8">
           <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
           <p className="text-lg leading-relaxed">

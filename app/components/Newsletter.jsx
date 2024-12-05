@@ -14,7 +14,7 @@ const Newsletter = () => {
     )
   })
   return (
-    <section className="py-16 bg-yellow-100">
+    <section className="py-16 bg-green-100">
       <div className="max-w-4xl mx-auto px-4 text-center" data-aos="fade-updated">
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
           Subscribe to Our Newsletter
@@ -27,9 +27,9 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="Enter your email address"
-            className="w-full sm:w-auto px-4 py-3 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:border-yellow-500"
+            className="w-full sm:w-auto px-4 py-3 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:border-green-500"
           />
-          <button className="px-6 py-3 bg-yellow-500 text-white font-medium rounded-md hover:bg-yellow-600 transition duration-300">
+          <button className="px-6 py-3 bg-green-500 text-white font-medium rounded-md hover:bg-green-600 transition duration-300">
             Subscribe
           </button>
         </div>

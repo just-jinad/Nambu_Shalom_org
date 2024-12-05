@@ -15,7 +15,7 @@ const Statistics = () => {
     { number: '3.7M', label: 'Services provided to people in 2023' },
     { number: '85', label: 'Countries We Work' },
     { number: '7.5K', label: 'Finished Projects' },
-    { number: '$320M', label: 'Invested in all our programs last year' },
+    // { number: '$320M', label: 'Invested in all our programs last year' },
   ];
 
   return (

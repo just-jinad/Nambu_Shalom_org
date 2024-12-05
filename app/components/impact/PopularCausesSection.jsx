@@ -45,7 +45,7 @@ export default function PopularCausesSection() {
       <div className="container mx-auto px-4 md:px-8" data-aos="fade-up">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-yellow-500">Our Impactful Causes</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-500">Our Impactful Causes</h2>
           <p className="text-gray-600 text-lg">
             Join us in supporting these initiatives that are transforming lives in Oke-Ogun and beyond.
           </p>
@@ -65,9 +65,9 @@ export default function PopularCausesSection() {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">{cause.title}</h3>
                 <p className="text-gray-600 mb-4">{cause.description}</p>
-                <div className="flex justify-between items-center text-yellow-500 font-medium">
-                  <span>Raised: {cause.raised}</span>
-                  <span>Goal: {cause.goal}</span>
+                <div className="flex justify-between items-center text-green-500 font-medium">
+                  {/* <span>Raised: {cause.raised}</span> */}
+                  {/* <span>Goal: {cause.goal}</span> */}
                 </div>
               </div>
             </div>

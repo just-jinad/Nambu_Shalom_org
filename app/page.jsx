@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import CoreSectors from "./components/CoreSectors";
@@ -25,7 +25,7 @@ export default function Home() {
       {/* <Volunteers/> */}
       <Testimonials/>
       <DonateSection/>
-      {/* <Newsletter/> */}
+      <Newsletter/>
       <Footer/>
    </>
   );
