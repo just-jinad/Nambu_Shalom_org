@@ -18,7 +18,7 @@ const CoreSectors = () => {
     { icon: <FaHandHoldingHeart className="text-4xl text-yellow-500" />, title: 'Economic Opportunity', description: 'We provide support for economic development to improve livelihoods and reduce poverty.' },
     { icon: <FaHeartbeat className="text-4xl text-red-500" />, title: 'Health and Nutrition', description: 'We promote health and nutrition programs to improve community well-being.' },
     { icon: <FaGraduationCap className="text-4xl text-blue-500" />, title: 'Education', description: 'We support education programs to ensure access to quality learning.' },
-    { icon: <FaWater className="text-4xl text-green-500" />, title: 'Water & Sanitation', description: 'We work to improve access to clean water and sanitation facilities.' },
+    { icon: <FaWater className="text-4xl text-green-500" />, title: 'Ecological care', description: 'We work to improve access to clean water and sanitation facilities.' },
   ];
 
   return (
