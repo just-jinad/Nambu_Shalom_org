@@ -32,7 +32,7 @@ const HeroSection = () => {
           <img
             src="https://i.pinimg.com/736x/ab/62/de/ab62ded6fb63594397bf43cf4186795a.jpg"
             alt="Empowering Communities"
-            className="w-full md:w-[80%] rounded-lg shadow-lg"
+            className="w-full md:w-[70%] rounded-lg shadow-lg"
           />
         </div>
       </div>
