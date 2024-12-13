@@ -24,8 +24,10 @@ const Navbar = () => {
   }, []);
 
   return (
+    <>
+    
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all ${
+      className={`fixed top-0 mb-4 left-0 w-full z-50 transition-all ${
         scrolling ? "bg-white shadow-lg" : "bg-transparent"
       }`}
     >
@@ -98,6 +100,8 @@ const Navbar = () => {
         </nav>
       )}
     </header>
+    
+    </>
   );
 };
 

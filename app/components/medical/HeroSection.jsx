@@ -4,7 +4,7 @@ export default function HeroSection() {
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-center gap-8">
           {/* Text Content */}
-          <div className="lg:w-1/2 text-center lg:text-left">
+          <div className="lg:w-1/2 mt-10 text-center lg:text-left">
             <h1 className="text-4xl font-bold text-gray-800">
               Consult your doctor <br /> from home
             </h1>

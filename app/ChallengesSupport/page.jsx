@@ -29,7 +29,7 @@ const ChallengesSupport = () => {
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>{" "}
           {/* Reduced opacity for brighter text */}
           <div
-            className="max-w-7xl mx-auto px-6 md:px-8 h-full flex items-center justify-center text-center"
+            className="max-w-7xl mt-6 mx-auto px-6 md:px-8 h-full flex items-center justify-center text-center"
             data-aos="fade-up"
           >
             <div className="text-center sm:px-8">
@@ -49,7 +49,7 @@ const ChallengesSupport = () => {
         <section className="max-w-7xl mx-auto px-6 md:px-8" data-aos="fade-up">
           {/* Challenges Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-yellow-600 mb-6 text-center">
+            <h2 className="text-3xl font-bold text-green-600 mb-6 text-center">
               Our Challenges
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -65,7 +65,7 @@ const ChallengesSupport = () => {
                     height={60}
                     className="mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-yellow-600 mb-2">
+                  <h3 className="text-xl font-semibold text-green-600 mb-2">
                     {challenge.title}
                   </h3>
                   <p className="text-gray-700">{challenge.description}</p>
@@ -76,7 +76,7 @@ const ChallengesSupport = () => {
 
           {/* Support Section */}
           <section data-aos="fade-up">
-            <h2 className="text-3xl font-bold text-yellow-600 mb-6 text-center">
+            <h2 className="text-3xl font-bold text-green-600 mb-6 text-center">
               How You Can Support Us
             </h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto text-center">
@@ -96,7 +96,7 @@ const ChallengesSupport = () => {
                     height={60}
                     className="mb-4"
                   />
-                  <h3 className="text-xl font-semibold text-yellow-600 mb-2">
+                  <h3 className="text-xl font-semibold text-green-600 mb-2">
                     {support.title}
                   </h3>
                   <p className="text-gray-700">{support.description}</p>
