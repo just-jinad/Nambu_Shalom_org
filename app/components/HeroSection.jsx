@@ -3,11 +3,11 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full py-12 md:py-20 bg-gray-50">
+    <section className="relative w-full py-12 md:py-20  bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 px-6 md:px-8">
         {/* Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-left mt-6 md:mt-0">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-gray-800">
+          <h1 className="text-3xl sm:text-4xl mt-10 md:text-5xl font-bold leading-tight text-gray-800">
             Together, We Empower <br />
             Communities and Restore <span className="text-green-400">Hope</span>
           </h1>
